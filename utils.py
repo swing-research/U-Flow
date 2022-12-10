@@ -128,14 +128,8 @@ def flags():
     parser.add_argument(
         '--dataset', 
         type=str,
-        default='scatter',
+        default='scattering',
         help='which dataset to work with')
-    
-    parser.add_argument(
-        '--latent_dim',
-        type=int,
-        default=256,
-        help='latent dimension')
     
     
     parser.add_argument(
@@ -194,7 +188,7 @@ def flags():
         '--input_type',
         type=str,
         default='bp',
-        help='measure of bp')
+        help='limited-view or full')
     
     FLAGS, unparsed = parser.parse_known_args()
     return FLAGS, unparsed

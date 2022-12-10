@@ -1,0 +1,4 @@
+- numpy
+- scipy
+- matplotlib
+- torch==1.12.1

@@ -19,7 +19,6 @@ np.random.seed(0)
 FLAGS, unparsed = flags()
 epochs_flow = FLAGS.epochs_flow
 epochs_unet = FLAGS.epochs_unet
-latent_dim = FLAGS.latent_dim
 batch_size = FLAGS.batch_size
 dataset = FLAGS.dataset
 gpu_num = FLAGS.gpu_num
@@ -50,23 +49,22 @@ if os.path.exists(exp_path) == False:
     os.mkdir(exp_path)
 
 
-if input_type == 'bp':
-    address = 'scatter_data_full'
+data_folder = 'dataset/'
+if input_type == 'full':
+    address = data_folder + 'full'
 
-elif input_type == 'bp_top':
-    address = 'scatter_data_BP_top'
-
-elif input_type == 'measure':
-    address = 'scatter_data'
+elif input_type == 'limited-view':
+    address = data_folder + 'limited-view'
 
 
-if dataset == 'scatter':
+
+if dataset == 'scattering':
 
     gt_train  = scattering_dataloader(address+'/gt/', typei='gt')
     gt_test  = scattering_dataloader(address+'/gt_test/', typei='gt')
 
-    measure_train  = scattering_dataloader(address + '/y/',typei = input_type)
-    measure_test  = scattering_dataloader(address + '/y_test/',typei = input_type)
+    measure_train  = scattering_dataloader(address + '/y/',typei = 'bp')
+    measure_test  = scattering_dataloader(address + '/y_test/',typei = 'bp')
 
 
 
@@ -76,7 +74,7 @@ else:
  
 
 
-if dataset =='scatter':
+if dataset =='scattering':
 
     train_loader_gt = torch.utils.data.DataLoader(gt_train, batch_size=batch_size,
                                            num_workers=32)
@@ -97,6 +95,7 @@ else:
 
 ntrain = len(gt_train)
 
+latent_dim = 256
 learning_rate = 1e-4
 step_size = 50
 gamma = 0.5
