@@ -95,7 +95,6 @@ else:
 
 ntrain = len(gt_train)
 
-latent_dim = 256
 learning_rate = 1e-4
 step_size = 50
 gamma = 0.5
@@ -109,7 +108,6 @@ print('---> batch_size: {}'.format(batch_size))
 print('---> dataset: {}'.format(dataset))
 print('---> Learning rate: {}'.format(learning_rate))
 print('---> experiment path: {}'.format(exp_path))
-print('---> latent dim: {}'.format(latent_dim))
 print('---> image size: {}'.format(image_size))
 print('---> Number of training samples: {}'.format(ntrain))
 
@@ -300,7 +298,7 @@ if train_flow:
     em = squeeze_inverse(embed, f)
     c_out , res = em.size()[1], em.size()[2]
 
-    nfm = glow(L=3, K=8, hidden_channels = latent_dim , c_in= c, c_out =c_out , res_in = image_size, res_out = res)    
+    nfm = glow(L=3, K=8, hidden_channels = 256 , c_in= c, c_out =c_out , res_in = image_size, res_out = res)    
 
     nfm = nfm.to(device)
     num_param_nfm = count_parameters(nfm)

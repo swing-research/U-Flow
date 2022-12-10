@@ -33,7 +33,7 @@ pip install -r requirements.txt
 We used a synthetic datasets composed of 128x128 images with random ellipses. We added 30dB noise to the measurements and consider two setups for configurations of receivers and incident waves 1) full: where the sensors are uniformy distributed around the object 2) limited-view: where the sensors are located on the right side of the object. You can download the [full](https://drive.switch.ch/index.php/s/NsrsJpzEUpHegfl) and [limited-view](https://drive.switch.ch/index.php/s/2IQIdeWacxSrj6S) datasets and unzip them on the dataset folder.
 
 ## Experiments
-This is an example of how training the model for 150 epoch for unet and 150 epochs for conditional flow models with limited-view configuration:
+This is an example of how training the model for 150 epochs for unet and 150 epochs for conditional flow models with limited-view configuration:
 ```sh
 python3 train.py --epochs_unet 150 --epochs_flow 150 --batch_size 64 --dataset scattering --lr 0.0001 --gpu_num 0 --remove_all 0 --desc default --input_type limited-view --train_unet 1 --train_flow 1 --restore_flow 1
 ```
