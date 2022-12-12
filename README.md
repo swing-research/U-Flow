@@ -46,7 +46,7 @@ If you find the code or our dataset useful in your research, please consider cit
 ```
 @article{Khorashadizadeh2022DeepVI,
   title={Deep Variational Inverse Scattering},
-  author={AmirEhsan Khorashadizadeh and Ali Aghababaei and Tin Vlavsi'c and Hieu Nguyen and Ivan Dokmani'c},
+  author={AmirEhsan Khorashadizadeh and Ali Aghababaei and Tin  Vla{\v{s}}i{\'c} and Hieu Nguyen and Ivan Dokmani{\'c}},
   journal={arXiv preprint arXiv:2212.04309},
   year={2022}
 }
