@@ -4,7 +4,7 @@
 [![Paper](https://img.shields.io/badge/arxiv-report-red)](https://arxiv.org/abs/2212.04309)
 [![PWC](https://img.shields.io/badge/PWC-report-blue)](https://paperswithcode.com/paper/deep-variational-inverse-scattering)
 
-This repository is the official Pytorch implementation of "[Deep Variational Inverse Scattering](https://arxiv.org/abs/2212.04309)".
+This repository is the official Pytorch implementation of "[Deep Variational Inverse Scattering](https://arxiv.org/abs/2212.04309)" published in the European Conference on Antennas and Propagation (EUCAP 2023).
 
 | [**Project Page**](https://sada.dmi.unibas.ch/en/research/injective-flows)  | 
 
@@ -44,10 +44,12 @@ Each argument is explained in detail in utils.py script.
 If you find the code or our dataset useful in your research, please consider citing the paper.
 
 ```
-@article{Khorashadizadeh2022DeepVI,
-  title={Deep Variational Inverse Scattering},
-  author={AmirEhsan Khorashadizadeh and Ali Aghababaei and Tin  Vla{\v{s}}i{\'c} and Hieu Nguyen and Ivan Dokmani{\'c}},
-  journal={arXiv preprint arXiv:2212.04309},
-  year={2022}
+@inproceedings{khorashadizadeh2023deep,
+  title={Deep variational inverse scattering},
+  author={Khorashadizadeh, AmirEhsan and Aghababaei, Ali and Vla{\v{s}}i{\'c}, Tin and Nguyen, Hieu and Dokmani{\'c}, Ivan},
+  booktitle={2023 17th European Conference on Antennas and Propagation (EuCAP)},
+  pages={1--5},
+  year={2023},
+  organization={IEEE}
 }
 ```
